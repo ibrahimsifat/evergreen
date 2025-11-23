@@ -1,0 +1,185 @@
+{
+  "projects": [
+    {
+      "id": "ongoing-1",
+      "title": "Civil Works at Faculty Housing Project",
+      "description": "Civil Works at faculty housing project",
+      "detailedDescription": "Comprehensive civil works for faculty housing project including foundation, structural work, and site development.",
+      "client": "KAAU Jeddah",
+      "location": "Jeddah",
+      "startDate": "2024-01-15",
+      "endDate": "2024-12-31",
+      "status": "in-progress",
+      "category": "civil",
+      "budget": "5,000,000",
+      "images": [
+        "/images/projects/imgi_2_1.jpg",
+        "/images/projects/imgi_3_2.jpg"
+      ],
+      "services": [
+        "Civil Works",
+        "General Contracting"
+      ],
+      "createdAt": "2024-01-10T10:00:00Z",
+      "updatedAt": "2024-12-20T15:30:00Z"
+    },
+    {
+      "id": "ongoing-2",
+      "title": "KAAU MEP Works",
+      "description": "KAAU -MP Works",
+      "detailedDescription": "Complete MEP (Mechanical, Electrical, Plumbing) works for KAAU project including HVAC, electrical systems, and plumbing infrastructure.",
+      "client": "Al -Bawani Tuwal",
+      "location": "Jeddah",
+      "startDate": "2024-02-01",
+      "endDate": "2024-11-30",
+      "status": "in-progress",
+      "category": "mep",
+      "budget": "3,500,000",
+      "images": [
+        "/images/projects/imgi_4_3.jpg",
+        "/images/projects/imgi_5_5.jpg"
+      ],
+      "services": [
+        "Electro Mechanical Works",
+        "Electro Works"
+      ],
+      "createdAt": "2024-01-20T09:00:00Z",
+      "updatedAt": "2024-12-15T12:00:00Z"
+    },
+    {
+      "id": "ongoing-7",
+      "title": "Dareen East Beach Phase 2 and Park Improvement Jubail KSA",
+      "description": "Dareen East Beach Phase 2 and Park imporvement Jubail Ksa",
+      "detailedDescription": "Phase 2 development of Dareen East Beach including park improvements and recreational facilities in Jubail.",
+      "client": "Al Ayuni Investment and contracting Co.",
+      "location": "Jeddah",
+      "startDate": "2024-07-01",
+      "endDate": "2024-12-31",
+      "status": "in-progress",
+      "category": "civil",
+      "budget": "4,500,000",
+      "images": [
+        "/images/projects/imgi_4_3.jpg"
+      ],
+      "services": [
+        "Civil Works",
+        "General Contracting"
+      ],
+      "createdAt": "2024-06-15T09:15:00Z",
+      "updatedAt": "2024-11-25T13:45:00Z"
+    },
+    {
+      "id": "ongoing-9",
+      "title": "Structural Steel Installation",
+      "description": "Structural Steel Installation",
+      "detailedDescription": "Structural steel installation for Othaim Mall expansion project in Al-Khobar.",
+      "client": "Othaim Mall",
+      "location": "Al-Khobar",
+      "startDate": "2024-09-01",
+      "endDate": "2024-12-31",
+      "status": "in-progress",
+      "category": "structural",
+      "budget": "6,000,000",
+      "images": [
+        "/images/projects/imgi_6_6.jpg"
+      ],
+      "services": [
+        "Structural Works",
+        "Heavy Equipment"
+      ],
+      "createdAt": "2024-08-25T16:00:00Z",
+      "updatedAt": "2024-11-15T10:10:00Z"
+    },
+    {
+      "id": "completed-9",
+      "title": "Basateen Foods Factory",
+      "description": "Basateen Foods Factory",
+      "detailedDescription": "Complete construction of Basateen Foods Factory for Binzarar Group in Yanbu.",
+      "client": "Binzarar Group",
+      "location": "Yanbu",
+      "startDate": "2023-10-01",
+      "endDate": "2024-01-31",
+      "status": "completed",
+      "category": "industrial",
+      "budget": "12,000,000",
+      "images": [
+        "/images/projects/imgi_3_2.jpg"
+      ],
+      "services": [
+        "Civil Works",
+        "Electro Mechanical Works",
+        "General Contracting"
+      ],
+      "createdAt": "2023-09-25T15:30:00Z",
+      "updatedAt": "2024-01-31T16:45:00Z"
+    },
+    {
+      "id": "completed-15",
+      "title": "Royal Commission Al Dana Mall",
+      "description": "Royal commission Al dana Mall",
+      "detailedDescription": "Construction of Royal Commission Al Dana Mall for Jameel Sayed in Yanbu.",
+      "client": "Jameel Sayed",
+      "location": "Yanbu",
+      "startDate": "2024-05-01",
+      "endDate": "2024-08-31",
+      "status": "completed",
+      "category": "commercial",
+      "budget": "15,000,000",
+      "images": [
+        "/images/projects/imgi_2_1.jpg"
+      ],
+      "services": [
+        "Civil Works",
+        "Electro Mechanical Works",
+        "General Contracting"
+      ],
+      "createdAt": "2024-04-20T15:00:00Z",
+      "updatedAt": "2024-08-31T16:20:00Z"
+    },
+    {
+      "id": "completed-17",
+      "title": "MEP Electrical Works LV, MV, Cables",
+      "description": "MEP electrical Works LV,MV, Cables",
+      "detailedDescription": "Low voltage, medium voltage, and cable installation for Al Konaini facility in Jubail.",
+      "client": "Al Konaini",
+      "location": "Jubail",
+      "startDate": "2024-07-01",
+      "endDate": "2024-10-31",
+      "status": "completed",
+      "category": "mep",
+      "budget": "4,200,000",
+      "images": [
+        "/images/projects/imgi_4_3.jpg"
+      ],
+      "services": [
+        "Electro Works",
+        "Electro Mechanical Works"
+      ],
+      "createdAt": "2024-06-20T14:15:00Z",
+      "updatedAt": "2024-10-31T12:00:00Z"
+    },
+    {
+      "id": "completed-18",
+      "title": "Housing Project",
+      "description": "Housing project",
+      "detailedDescription": "Residential housing project for Al Mishel Contracting in Jubail.",
+      "client": "Al Mishel Contracting",
+      "location": "Jubail",
+      "startDate": "2024-08-01",
+      "endDate": "2024-11-30",
+      "status": "completed",
+      "category": "residential",
+      "budget": "6,500,000",
+      "images": [
+        "/images/projects/imgi_5_5.jpg"
+      ],
+      "services": [
+        "Civil Works",
+        "Electro Mechanical Works",
+        "General Contracting"
+      ],
+      "createdAt": "2024-07-25T16:30:00Z",
+      "updatedAt": "2024-11-30T15:15:00Z"
+    }
+  ]
+}

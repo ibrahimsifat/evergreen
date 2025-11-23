@@ -1,0 +1,233 @@
+{
+  "services": [
+    {
+      "id": "manpower-supply",
+      "title": "Professional Manpower Supply",
+      "shortTitle": "Manpower Supply",
+      "description": "Providing skilled, certified, and reliable workforce solutions tailored to the unique demands of construction and industrial projects.",
+      "detailedDescription": "At Evergreen Intelligent Company Ltd (EIC), we understand that the backbone of any successful project is its workforce. Our Manpower Supply division is dedicated to bridging the gap between talent and opportunity, providing top-tier professionals and skilled laborers to the construction, oil & gas, and industrial sectors across Saudi Arabia. We go beyond simple staffing; we offer comprehensive workforce management solutions that ensure productivity, safety, and compliance.",
+      "keyBenefits": [
+        "Rapid Mobilization of Skilled Teams",
+        "Strict Compliance with Saudi Labor Laws",
+        "Comprehensive Vetting & Skill Verification",
+        "Flexible Staffing Models (Short & Long Term)",
+        "Dedicated On-Site Support & Management",
+        "Focus on Health, Safety & Environment (HSE)"
+      ],
+      "process": [
+        {
+          "title": "Needs Assessment",
+          "description": "We analyze your project requirements, timeline, and specific skill gaps to create a tailored staffing plan."
+        },
+        {
+          "title": "Sourcing & Screening",
+          "description": "Our recruitment team leverages a vast database to identify candidates, conducting rigorous interviews and skill tests."
+        },
+        {
+          "title": "Mobilization & Onboarding",
+          "description": "We handle all logistics, including visas, medicals, and safety induction, ensuring workers arrive ready to perform."
+        },
+        {
+          "title": "Ongoing Management",
+          "description": "We provide continuous support, managing payroll, accommodation, and performance to ensure seamless operations."
+        }
+      ],
+      "industriesServed": [
+        "Construction & Infrastructure",
+        "Oil & Gas / Petrochemical",
+        "Power Generation & Distribution",
+        "Manufacturing & Industrial",
+        "Facility Management",
+        "Logistics & Warehousing"
+      ],
+      "services": [
+        "Project Managers & Engineers",
+        "Safety Officers & Inspectors",
+        "QA/QC Engineers & Inspectors",
+        "Certified Welders (All Processes)",
+        "Pipe Fitters & Fabricators",
+        "Industrial Electricians",
+        "Instrument Technicians",
+        "Scaffolders & Riggers",
+        "Heavy Equipment Operators",
+        "General & Skilled Labor"
+      ],
+      "images": [
+        "/images/services/new/manpower.png"
+      ],
+      "icon": "Users",
+      "category": "manpower"
+    },
+    {
+      "id": "electrical-subcontracting",
+      "title": "Electrical Subcontracting Services",
+      "shortTitle": "Electrical Subcontracting",
+      "description": "Delivering comprehensive electrical engineering, installation, and maintenance solutions with a focus on safety and efficiency.",
+      "detailedDescription": "EIC's Electrical Subcontracting division offers end-to-end electrical solutions for complex industrial and commercial projects. From high-voltage transmission systems to intricate low-current installations, our team of certified engineers and technicians ensures every connection is safe, reliable, and efficient. We combine technical expertise with cutting-edge technology to power the infrastructure of tomorrow, adhering to the highest international standards of quality and safety.",
+      "keyBenefits": [
+        "Turnkey Electrical Solutions",
+        "Certified & Experienced Engineering Team",
+        "Adherence to NEC, IEC & SASO Standards",
+        "Advanced Testing & Commissioning Capabilities",
+        "Preventive Maintenance Programs",
+        "24/7 Emergency Support"
+      ],
+      "process": [
+        {
+          "title": "Design & Engineering",
+          "description": "We develop detailed electrical designs, load calculations, and schematics optimized for efficiency and safety."
+        },
+        {
+          "title": "Procurement & Supply",
+          "description": "We source high-quality materials and equipment from trusted global manufacturers to ensure system longevity."
+        },
+        {
+          "title": "Installation & Execution",
+          "description": "Our skilled technicians execute installations with precision, following strict safety protocols and project timelines."
+        },
+        {
+          "title": "Testing & Commissioning",
+          "description": "We conduct rigorous testing to verify system performance and safety before final handover."
+        }
+      ],
+      "industriesServed": [
+        "Commercial Buildings & Malls",
+        "Industrial Plants & Factories",
+        "Substations & Power Plants",
+        "Residential Complexes",
+        "Hospitals & Healthcare Facilities",
+        "Data Centers"
+      ],
+      "services": [
+        "MV/LV Transformer Installation",
+        "Switchgear & Panel Board Assembly",
+        "Cable Tray & Conduit Systems",
+        "Power & Control Cabling",
+        "Industrial Lighting Systems",
+        "Earthing & Lightning Protection",
+        "Fire Alarm & Detection Systems",
+        "BMS & Automation Systems",
+        "Testing, Commissioning & Maintenance"
+      ],
+      "images": [
+        "/images/services/new/electrical.png"
+      ],
+      "icon": "Zap",
+      "category": "electrical"
+    },
+    {
+      "id": "mechanical-subcontracting",
+      "title": "Mechanical Subcontracting Solutions",
+      "shortTitle": "Mechanical Subcontracting",
+      "description": "Expert mechanical engineering, fabrication, and installation services for HVAC, piping, and industrial systems.",
+      "detailedDescription": "Our Mechanical Subcontracting division is equipped to handle the most demanding mechanical challenges in the construction and industrial sectors. We specialize in HVAC systems, industrial piping, and structural steel fabrication. With a focus on precision engineering and operational excellence, EIC delivers mechanical systems that optimize performance, reduce energy consumption, and ensure long-term reliability for your facilities.",
+      "keyBenefits": [
+        "Precision Fabrication & Installation",
+        "Energy-Efficient HVAC Designs",
+        "Certified Welding & Piping Experts",
+        "Comprehensive QA/QC Procedures",
+        "Timely Project Delivery",
+        "Cost-Effective Maintenance Solutions"
+      ],
+      "process": [
+        {
+          "title": "System Design",
+          "description": "We design mechanical systems tailored to your facility's specific cooling, heating, and flow requirements."
+        },
+        {
+          "title": "Fabrication",
+          "description": "Our off-site and on-site fabrication teams produce high-quality ductwork, piping spools, and steel structures."
+        },
+        {
+          "title": "Installation",
+          "description": "We install complex mechanical systems with minimal disruption to ongoing operations, ensuring perfect fit and function."
+        },
+        {
+          "title": "Balancing & Commissioning",
+          "description": "We fine-tune systems for optimal performance, ensuring air and fluid flows meet design specifications."
+        }
+      ],
+      "industriesServed": [
+        "Petrochemical & Refineries",
+        "Manufacturing Plants",
+        "Commercial High-Rises",
+        "District Cooling Plants",
+        "Water Treatment Facilities",
+        "Warehouses & Cold Storage"
+      ],
+      "services": [
+        "HVAC System Design & Installation",
+        "Chilled Water Systems",
+        "Industrial Piping (CS, SS, Alloy)",
+        "Fire Fighting Systems (Sprinklers, Pumps)",
+        "Ductwork Fabrication & Installation",
+        "Structural Steel Erection",
+        "Equipment Installation (Pumps, Chillers)",
+        "Insulation & Cladding",
+        "Plumbing & Drainage Systems"
+      ],
+      "images": [
+        "/images/services/new/mechanical.png"
+      ],
+      "icon": "Settings",
+      "category": "mechanical"
+    },
+    {
+      "id": "general-contracting",
+      "title": "General Contracting & Construction",
+      "shortTitle": "General Contracting",
+      "description": "End-to-end construction management and execution for residential, commercial, and industrial projects.",
+      "detailedDescription": "EIC serves as a premier General Contractor, taking full responsibility for the successful execution of construction projects. From site preparation to final finishing, we manage every aspect of the build. Our integrated approach combines civil, electrical, and mechanical expertise to deliver turnkey projects that stand the test of time. We are committed to building infrastructure that drives progress and improves communities.",
+      "keyBenefits": [
+        "Single Point of Responsibility",
+        "Integrated Project Management",
+        "Cost & Schedule Control",
+        "High-Quality Construction Standards",
+        "Sustainable Building Practices",
+        "Transparent Communication"
+      ],
+      "process": [
+        {
+          "title": "Pre-Construction",
+          "description": "We conduct site surveys, feasibility studies, and detailed planning to set a solid foundation for the project."
+        },
+        {
+          "title": "Project Management",
+          "description": "Our dedicated PMs oversee all activities, coordinating resources and ensuring milestones are met."
+        },
+        {
+          "title": "Construction Execution",
+          "description": "We manage all civil works, structural builds, and finishing trades with our skilled in-house teams."
+        },
+        {
+          "title": "Handover & Closeout",
+          "description": "We ensure a smooth transition with comprehensive documentation, as-built drawings, and warranty support."
+        }
+      ],
+      "industriesServed": [
+        "Residential Developments",
+        "Commercial Complexes",
+        "Industrial Warehouses",
+        "Public Infrastructure",
+        "Educational Institutions",
+        "Retail Centers"
+      ],
+      "services": [
+        "Site Preparation & Excavation",
+        "Concrete & Structural Works",
+        "Masonry & Plastering",
+        "Finishing Works (Flooring, Painting)",
+        "Renovation & Remodeling",
+        "Steel Structure Construction",
+        "Civil Maintenance Works",
+        "Waterproofing & Insulation",
+        "Landscaping & External Works"
+      ],
+      "images": [
+        "/images/services/new/general.png"
+      ],
+      "icon": "Building2",
+      "category": "construction"
+    }
+  ]
+}
