@@ -2,15 +2,15 @@
 
 import { Button } from "@/components/ui/button";
 import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardHeader,
-  CardTitle,
+    Card,
+    CardContent,
+    CardDescription,
+    CardHeader,
+    CardTitle,
 } from "@/components/ui/card";
 import { useCMSAuth } from "@/hooks/use-cms-auth";
 import { useStats } from "@/hooks/use-data-cache";
-import { Building2, Eye, LogOut, Plus, Users, Wrench } from "lucide-react";
+import { Building2, Eye, Image as ImageIcon, LogOut, Plus, Users, Wrench } from "lucide-react";
 import Link from "next/link";
 
 export default function CMSPage() {
@@ -116,6 +116,34 @@ export default function CMSPage() {
                   </Button>
                 </Link>
                 <Link href="/cms/clients/new">
+                  <Button size="sm">
+                    <Plus className="h-4 w-4" />
+                  </Button>
+                </Link>
+              </div>
+            </CardContent>
+          </Card>
+
+          {/* Gallery Management */}
+          <Card className="hover:shadow-lg transition-shadow">
+            <CardHeader>
+              <CardTitle className="flex items-center">
+                <ImageIcon className="h-6 w-6 mr-2 text-orange-600" />
+                Gallery
+              </CardTitle>
+              <CardDescription>
+                Manage your gallery images
+              </CardDescription>
+            </CardHeader>
+            <CardContent className="space-y-3">
+              <div className="flex space-x-2">
+                <Link href="/cms/gallery" className="flex-1">
+                  <Button variant="outline" className="w-full">
+                    <Eye className="h-4 w-4 mr-2" />
+                    View All
+                  </Button>
+                </Link>
+                <Link href="/cms/gallery/new">
                   <Button size="sm">
                     <Plus className="h-4 w-4" />
                   </Button>

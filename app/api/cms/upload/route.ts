@@ -52,7 +52,7 @@ export async function POST(request: NextRequest) {
     }
 
     // Validate category
-    const validCategories = ["projects", "services", "clients", "general"];
+    const validCategories = ["projects", "services", "clients", "gallery", "general"];
     if (!validCategories.includes(category)) {
       return NextResponse.json(
         { success: false, message: "Invalid category" },

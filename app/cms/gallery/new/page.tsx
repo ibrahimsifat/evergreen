@@ -13,7 +13,7 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
 import { useCacheInvalidation } from "@/lib/cache-invalidation";
-import { ArrowLeft, Save } from "lucide-react";
+import { ArrowLeft, Save, Upload } from "lucide-react";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { useState } from "react";
@@ -29,6 +29,7 @@ export default function NewGalleryPage() {
   });
   const [tagInput, setTagInput] = useState("");
   const [loading, setLoading] = useState(false);
+  const [uploading, setUploading] = useState(false);
   const [error, setError] = useState("");
   const router = useRouter();
   const cacheInvalidation = useCacheInvalidation();
@@ -57,6 +58,41 @@ export default function NewGalleryPage() {
     }));
   };
 
+  const handleImageUpload = async (
+    event: React.ChangeEvent<HTMLInputElement>
+  ) => {
+    const file = event.target.files?.[0];
+    if (!file) return;
+
+    setUploading(true);
+    setError("");
+
+    try {
+      const formData = new FormData();
+      formData.append("file", file);
+      formData.append("category", "gallery");
+
+      const response = await fetch("/api/cms/upload", {
+        method: "POST",
+        body: formData,
+      });
+
+      const data = await response.json();
+      if (data.success) {
+        setFormData((prev) => ({
+          ...prev,
+          imageUrl: data.data.fileUrl,
+        }));
+      } else {
+        setError("Failed to upload image");
+      }
+    } catch (error) {
+      setError("Failed to upload image");
+    } finally {
+      setUploading(false);
+    }
+  };
+
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setLoading(true);
@@ -75,7 +111,7 @@ export default function NewGalleryPage() {
 
       if (data.success) {
         // Invalidate cache to show the new gallery item
-        cacheInvalidation.invalidatePattern('gallery');
+        cacheInvalidation.custom(['gallery-items']);
         router.push("/cms/gallery");
       } else {
         setError(data.message || "Failed to create gallery item");
@@ -152,17 +188,50 @@ export default function NewGalleryPage() {
               </div>
 
               <div className="space-y-2">
-                <Label htmlFor="imageUrl">Image URL *</Label>
-                <Input
-                  id="imageUrl"
-                  type="url"
-                  value={formData.imageUrl}
-                  onChange={(e) => handleInputChange("imageUrl", e.target.value)}
-                  placeholder="/images/gallery/example.jpg"
-                  required
-                />
+                <Label htmlFor="imageUrl">Image *</Label>
+                <div className="flex items-center gap-4">
+                  <div className="flex-1">
+                    <Input
+                      id="imageUrl"
+                      type="text"
+                      value={formData.imageUrl}
+                      onChange={(e) => handleInputChange("imageUrl", e.target.value)}
+                      placeholder="/images/gallery/example.jpg"
+                      required
+                    />
+                  </div>
+                  <div>
+                    <input
+                      type="file"
+                      id="image-upload"
+                      accept="image/*"
+                      onChange={handleImageUpload}
+                      className="hidden"
+                    />
+                    <label htmlFor="image-upload">
+                      <Button
+                        type="button"
+                        variant="outline"
+                        disabled={uploading}
+                        onClick={() => document.getElementById("image-upload")?.click()}
+                      >
+                        <Upload className="h-4 w-4 mr-2" />
+                        {uploading ? "Uploading..." : "Upload"}
+                      </Button>
+                    </label>
+                  </div>
+                </div>
+                {formData.imageUrl && (
+                  <div className="mt-4">
+                    <img
+                      src={formData.imageUrl}
+                      alt="Preview"
+                      className="w-full max-w-md h-48 object-cover rounded-lg border"
+                    />
+                  </div>
+                )}
                 <p className="text-sm text-gray-500">
-                  Enter the path to your image (e.g., /images/gallery/photo.jpg)
+                  Upload an image or enter the path manually
                 </p>
               </div>
 
