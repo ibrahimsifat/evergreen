@@ -127,9 +127,17 @@ export default function PremiumFooter() {
                 </div>
                 <div>
                   <span className="block text-sm font-medium text-white mb-1">Email</span>
-                  <a href="mailto:info@evergreen.com.sa" className="text-sm text-gray-400 hover:text-white transition-colors">
-                    info@evergreen.com.sa
-                  </a>
+                  <div className="flex flex-col gap-1">
+                    <a href="mailto:info@evergreen.com.sa" className="text-sm text-gray-400 hover:text-white transition-colors">
+                      info@evergreen.com.sa
+                    </a>
+                    <a href="mailto:evergreenintelligent@gmail.com" className="text-sm text-gray-400 hover:text-white transition-colors">
+                      evergreenintelligent@gmail.com
+                    </a>
+                    <a href="mailto:malikusmanevergreenintelligent@gmail.com" className="text-sm text-gray-400 hover:text-white transition-colors">
+                      malikusmanevergreenintelligent@gmail.com
+                    </a>
+                  </div>
                 </div>
               </li>
             </ul>

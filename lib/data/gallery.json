@@ -1,0 +1,90 @@
+[
+  {
+    "id": "gallery-1",
+    "title": "Industrial Construction Site",
+    "description": "Large-scale industrial construction project showcasing our expertise in complex infrastructure development",
+    "imageUrl": "/images/gallary/1.jpg",
+    "category": "Projects",
+    "tags": ["construction", "industrial", "infrastructure"],
+    "isActive": true,
+    "createdAt": "2024-01-15T10:00:00.000Z",
+    "updatedAt": "2024-01-15T10:00:00.000Z"
+  },
+  {
+    "id": "gallery-2",
+    "title": "Electrical Installation Work",
+    "description": "Professional electrical subcontracting services for commercial and industrial facilities",
+    "imageUrl": "/images/gallary/2.jpg",
+    "category": "Projects",
+    "tags": ["electrical", "installation", "commercial"],
+    "isActive": true,
+    "createdAt": "2024-01-16T10:00:00.000Z",
+    "updatedAt": "2024-01-16T10:00:00.000Z"
+  },
+  {
+    "id": "gallery-3",
+    "title": "Mechanical Systems Installation",
+    "description": "Advanced mechanical systems and HVAC installation for modern facilities",
+    "imageUrl": "/images/gallary/3.jpg",
+    "category": "Projects",
+    "tags": ["mechanical", "HVAC", "systems"],
+    "isActive": true,
+    "createdAt": "2024-01-17T10:00:00.000Z",
+    "updatedAt": "2024-01-17T10:00:00.000Z"
+  },
+  {
+    "id": "gallery-4",
+    "title": "Team at Work",
+    "description": "Our skilled workforce delivering excellence on every project",
+    "imageUrl": "/images/gallary/4.jpg",
+    "category": "Team",
+    "tags": ["team", "workforce", "professionals"],
+    "isActive": true,
+    "createdAt": "2024-01-18T10:00:00.000Z",
+    "updatedAt": "2024-01-18T10:00:00.000Z"
+  },
+  {
+    "id": "gallery-5",
+    "title": "Construction Equipment",
+    "description": "State-of-the-art equipment and machinery for efficient project execution",
+    "imageUrl": "/images/gallary/5.jpg",
+    "category": "Equipment",
+    "tags": ["equipment", "machinery", "technology"],
+    "isActive": true,
+    "createdAt": "2024-01-19T10:00:00.000Z",
+    "updatedAt": "2024-01-19T10:00:00.000Z"
+  },
+  {
+    "id": "gallery-6",
+    "title": "Safety Protocols in Action",
+    "description": "Maintaining highest safety standards across all our construction sites",
+    "imageUrl": "/images/gallary/6.jpg",
+    "category": "Projects",
+    "tags": ["safety", "protocols", "standards"],
+    "isActive": true,
+    "createdAt": "2024-01-20T10:00:00.000Z",
+    "updatedAt": "2024-01-20T10:00:00.000Z"
+  },
+  {
+    "id": "gallery-7",
+    "title": "Completed Infrastructure",
+    "description": "Successfully completed infrastructure project demonstrating our capabilities",
+    "imageUrl": "/images/gallary/7.jpg",
+    "category": "Projects",
+    "tags": ["completed", "infrastructure", "success"],
+    "isActive": true,
+    "createdAt": "2024-01-21T10:00:00.000Z",
+    "updatedAt": "2024-01-21T10:00:00.000Z"
+  },
+  {
+    "id": "gallery-8",
+    "title": "Modern Facility Construction",
+    "description": "Building modern facilities with cutting-edge construction techniques",
+    "imageUrl": "/images/gallary/8.jpg",
+    "category": "Facilities",
+    "tags": ["modern", "facility", "construction"],
+    "isActive": true,
+    "createdAt": "2024-01-22T10:00:00.000Z",
+    "updatedAt": "2024-01-22T10:00:00.000Z"
+  }
+]

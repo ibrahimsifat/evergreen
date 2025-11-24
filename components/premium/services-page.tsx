@@ -47,37 +47,62 @@ export default function PremiumServicesPage() {
   return (
     <Layout>
       {/* Hero Section */}
-      <section className="relative h-[60vh] min-h-[500px] flex items-center justify-center overflow-hidden bg-gray-900">
-        <div className="absolute inset-0">
+      <section className="relative min-h-[85vh] md:h-[70vh] md:min-h-[600px] flex items-center justify-center overflow-hidden bg-gray-900 ">
+        <motion.div 
+          initial={{ scale: 1.1 }}
+          animate={{ scale: 1 }}
+          transition={{ duration: 10, ease: "linear" }}
+          className="absolute inset-0"
+        >
           <Image
-            src="/images/services-hero-4.png"
-            alt="Our Services"
+            src="/images/services-hero-real.png"
+            alt="Industrial Services Excellence"
             fill
-            className="object-cover opacity-60"
+            className="object-cover opacity-70"
             priority
           />
-          <div className="absolute inset-0 bg-gradient-to-t from-gray-900 via-gray-900/40 to-transparent" />
-        </div>
+          <div className="absolute inset-0 bg-gradient-to-r from-gray-900/90 via-gray-900/60 to-transparent" />
+          <div className="absolute inset-0 bg-gradient-to-t from-gray-900 via-transparent to-transparent" />
+        </motion.div>
         
-        <div className="container mx-auto px-4 relative z-10 text-center">
+        <div className="container mx-auto px-4 relative z-10 pt-32 pb-20 md:py-0">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
+            transition={{ duration: 0.8, delay: 0.2 }}
+            className="max-w-4xl"
           >
-            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-blue-500/20 backdrop-blur-md border border-blue-500/30 text-blue-200 text-sm font-medium mb-6">
+            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-blue-200 text-sm font-medium mb-8">
               <span className="w-2 h-2 rounded-full bg-blue-400 animate-pulse" />
-              Comprehensive Solutions
+              <span>Comprehensive Industrial Solutions</span>
             </div>
-            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 tracking-tight">
-              World-Class <br />
+            
+            <h1 className="text-2xl md:text-5xl lg:text-7xl font-bold text-white mb-8 tracking-tight leading-tight">
+              Powering Progress Through <br />
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-300">
-                Industrial Services
+                Technical Excellence
               </span>
             </h1>
-            <p className="text-xl text-gray-300 max-w-2xl mx-auto font-light leading-relaxed">
-              Delivering excellence in manpower, electrical, and mechanical subcontracting across Saudi Arabia.
+            
+            <p className="text-lg md:text-xl text-gray-200 max-w-2xl font-light leading-relaxed mb-10">
+              Your trusted partner for specialized manpower, electrical, and mechanical subcontracting services across the Kingdom of Saudi Arabia.
             </p>
+
+            <div className="flex flex-col sm:flex-row flex-wrap gap-4">
+              <Link 
+                href="/contact"
+                className="px-8 py-4 bg-blue-600 text-white rounded-full font-semibold hover:bg-blue-700 transition-all duration-300 shadow-lg hover:shadow-blue-600/30 flex items-center justify-center gap-2 group"
+              >
+                Start Your Project
+                <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+              </Link>
+              <Link 
+                href="#services-grid"
+                className="px-8 py-4 bg-white/10 backdrop-blur-sm text-white border border-white/20 rounded-full font-semibold hover:bg-white/20 transition-all duration-300 text-center"
+              >
+                Explore Services
+              </Link>
+            </div>
           </motion.div>
         </div>
       </section>
@@ -87,7 +112,7 @@ export default function PremiumServicesPage() {
         <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-gray-200 to-transparent" />
         
         <div className="container mx-auto px-4">
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 -mt-32 relative z-20">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {loading ? (
               // Loading Skeletons
               [1, 2, 3].map((i) => (
@@ -106,7 +131,7 @@ export default function PremiumServicesPage() {
                     transition={{ delay: index * 0.1 }}
                   >
                     <Link href={`/services/${service.id}`} className="group block h-full">
-                      <div className="bg-white rounded-md overflow-hidden shadow-xl transition-all duration-500 h-full flex flex-col border border-gray-100">
+                      <div className="bg-white rounded-md overflow-hidden shadow-md transition-all duration-500 h-full flex flex-col border border-gray-100">
                         {/* Image Area */}
                         <div className="relative h-64 overflow-hidden">
                           <Image

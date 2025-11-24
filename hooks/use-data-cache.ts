@@ -24,9 +24,11 @@ const CACHE_KEYS = {
   PROJECTS: "projects",
   SERVICES: "services",
   CLIENTS: "clients",
+  GALLERY: "gallery",
   PROJECT: (id: string) => `project-${id}`,
   SERVICE: (id: string) => `service-${id}`,
   CLIENT: (id: string) => `client-${id}`,
+  GALLERY_ITEM: (id: string) => `gallery-${id}`,
   STATS: "stats",
 } as const;
 
@@ -71,6 +73,7 @@ export function useDataCache<T>(
       // Use cache if valid and not forcing refresh
       if (!forceRefresh && cacheEntry && isCacheValid(cacheEntry)) {
         setData(cacheEntry.data);
+        setLoading(false);
         return;
       }
 
@@ -324,6 +327,37 @@ export const useStats = (options?: { ttl?: number; enabled?: boolean }) => {
       };
     },
     options
+  );
+};
+
+export const useGalleryItems = (options?: { ttl?: number; enabled?: boolean }) => {
+  return useDataCache(
+    CACHE_KEYS.GALLERY,
+    async () => {
+      const response = await fetch("/api/cms/gallery");
+      const data = await response.json();
+      if (!data.success)
+        throw new Error(data.message || "Failed to fetch gallery items");
+      return data.data;
+    },
+    options
+  );
+};
+
+export const useGalleryItem = (
+  id: string,
+  options?: { ttl?: number; enabled?: boolean }
+) => {
+  return useDataCache(
+    CACHE_KEYS.GALLERY_ITEM(id),
+    async () => {
+      const response = await fetch(`/api/cms/gallery/${id}`);
+      const data = await response.json();
+      if (!data.success)
+        throw new Error(data.message || "Failed to fetch gallery item");
+      return data.data;
+    },
+    { ...options, enabled: options?.enabled !== false && !!id }
   );
 };
 

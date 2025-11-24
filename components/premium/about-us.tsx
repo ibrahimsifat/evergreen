@@ -27,18 +27,14 @@ export default function PremiumAboutUs() {
             </div>
 
             <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6 leading-tight">
-              Building Excellence Through <br />
+              Premier Manpower & <br />
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-blue-800">
-                Innovation & Integrity
+                Subcontracting Partner
               </span>
             </h2>
 
             <p className="text-lg text-gray-600 mb-8 leading-relaxed">
-              Evergreen Intelligent Company Ltd (EIC) is a dynamic leader in
-              Jeddah, Saudi Arabia, specializing in comprehensive manpower
-              supply, electrical, and mechanical subcontracting services. We
-              deliver customized, reliable solutions that drive industrial
-              success across the Kingdom.
+              Evergreen Intelligent Company Ltd (EIC) is a leading <span className="font-semibold text-blue-600">Manpower Company</span> in Saudi Arabia, also specializing as a trusted <span className="font-semibold text-blue-600">Subcontractor</span> for Electrical and Mechanical projects. We deliver skilled workforce solutions and technical expertise to drive industrial success across the Kingdom.
             </p>
 
             <div className="grid sm:grid-cols-2 gap-4 mb-10">

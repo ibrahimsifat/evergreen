@@ -2,6 +2,7 @@ import Layout from "@/components/layout";
 import PremiumAboutUs from "@/components/premium/about-us";
 import PremiumClients from "@/components/premium/clients";
 import PremiumContactCTA from "@/components/premium/contact-cta";
+import PremiumGallerySection from "@/components/premium/gallery-section";
 import PremiumHero from "@/components/premium/hero";
 import PremiumMissionVision from "@/components/premium/mission-vision";
 import PremiumProjects from "@/components/premium/projects";
@@ -34,7 +35,7 @@ export const metadata: Metadata = {
       "Evergreen Intelligent Company Ltd (EIC) provides comprehensive manpower supply, electrical subcontracting, and mechanical subcontracting services across Saudi Arabia.",
     images: [
       {
-        url: "/images/imgi_13_6.jpg",
+        url: "/images/logo.jpg",
         width: 1200,
         height: 630,
         alt: "Construction site with workers and heavy machinery - Evergreen Intelligent Company Ltd",
@@ -51,6 +52,7 @@ export default function HomePage() {
       <PremiumMissionVision />
       <PremiumServices />
       <PremiumProjects />
+      <PremiumGallerySection />
       <PremiumClients />
       <PremiumWhyChooseUs />
       <PremiumQuality />

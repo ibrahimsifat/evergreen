@@ -31,10 +31,15 @@ async function migrateData() {
       readFileSync(join(process.cwd(), "lib/data/clients.json"), "utf8")
     );
 
+    const galleryData = JSON.parse(
+      readFileSync(join(process.cwd(), "lib/data/gallery.json"), "utf8")
+    );
+
     // Clear existing collections
     await db.collection("projects").deleteMany({});
     await db.collection("services").deleteMany({});
     await db.collection("clients").deleteMany({});
+    await db.collection("gallery").deleteMany({});
 
     console.log("Cleared existing collections");
 
@@ -56,17 +61,25 @@ async function migrateData() {
       console.log(`Migrated ${clientsData.clients.length} clients`);
     }
 
+    // Insert gallery items
+    if (galleryData && galleryData.length > 0) {
+      await db.collection("gallery").insertMany(galleryData);
+      console.log(`Migrated ${galleryData.length} gallery items`);
+    }
+
     console.log("Data migration completed successfully!");
 
     // Verify migration
     const projectCount = await db.collection("projects").countDocuments();
     const serviceCount = await db.collection("services").countDocuments();
     const clientCount = await db.collection("clients").countDocuments();
+    const galleryCount = await db.collection("gallery").countDocuments();
 
     console.log(`Verification:
     - Projects: ${projectCount}
     - Services: ${serviceCount}
-    - Clients: ${clientCount}`);
+    - Clients: ${clientCount}
+    - Gallery: ${galleryCount}`);
 
     // Close the connection
     await client.close();

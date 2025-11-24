@@ -77,7 +77,7 @@ export default function PremiumHeader() {
     <>
       <motion.header
         className={cn(
-          "fixed top-0 left-0 right-0 z-50 transition-all duration-500 h-24 flex items-center",
+          "fixed top-0 left-0 right-0 z-50 transition-all duration-500 flex items-center",
           isScrolled
             ? "bg-white/90 backdrop-blur-md shadow-lg"
             : "bg-transparent"
@@ -86,7 +86,7 @@ export default function PremiumHeader() {
         animate={{ y: 0 }}  
         transition={{ duration: 0.5 }}
       >
-        <div className="container mx-auto px-4">
+        <div className={cn("container mx-auto px-4", !isScrolled && "pb-10")}>
           <div className="flex items-center justify-between">
             {/* Logo */}
             <Link href="/" className="relative z-50 pt-2">
@@ -109,6 +109,7 @@ export default function PremiumHeader() {
               {[
                 { name: "Home", href: "/" },
                 { name: "About", href: "/about" },
+                { name: "Gallery", href: "/gallery" },
               ].map((item) => (
                 <Link
                   key={item.name}

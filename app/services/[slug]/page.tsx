@@ -87,7 +87,7 @@ export default function ServiceDetailPage({ params }: ServiceDetailPageProps) {
   return (
     <Layout>
       {/* Hero Section */}
-      <section className="relative h-[70vh] min-h-[600px] flex items-center justify-center overflow-hidden bg-gray-900">
+      <section className="relative min-h-[85vh] md:h-[70vh] md:min-h-[600px] flex items-center justify-center overflow-hidden bg-gray-900">
         <div className="absolute inset-0">
           <Image
             src={service.images[0]}
@@ -99,7 +99,7 @@ export default function ServiceDetailPage({ params }: ServiceDetailPageProps) {
           <div className="absolute inset-0 bg-gradient-to-b from-gray-900/80 via-gray-900/40 to-gray-900" />
         </div>
 
-        <div className="container mx-auto px-4 relative z-10">
+        <div className="container mx-auto px-4 relative z-10 pt-32 pb-20 md:py-0">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}

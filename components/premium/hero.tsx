@@ -9,43 +9,27 @@ import { useEffect, useState } from "react";
 const slides = [
   {
     id: 1,
-    image: "/images/hero/construction_2.png",
-    title: "Building Excellence",
-    subtitle: "Premier General Contracting",
+    image: "/images/hero/manpower.png",
+    title: "Manpower Company",
+    subtitle: "Leading Workforce Solutions Provider",
     description:
-      "Delivering world-class construction solutions, from residential complexes to massive industrial infrastructure, with precision and integrity.",
+      "Saudi Arabia's premier manpower company, providing skilled professionals and certified workforce for industrial, construction, and technical projects across the Kingdom.",
   },
   {
     id: 2,
-    image: "/images/hero/manpower.png",
-    title: "Expert Manpower",
-    subtitle: "Skilled Workforce Solutions",
+    image: "/images/hero/electrical.png",
+    title: "Electrical Subcontractor",
+    subtitle: "Specialized Electrical Solutions",
     description:
-      "Providing certified professionals and skilled labor to drive your project's success with efficiency, safety, and reliability.",
+      "Expert electrical subcontracting services including high-voltage installations, switchgear, power distribution, and complete electrical systems for industrial facilities.",
   },
   {
     id: 3,
-    image: "/images/hero/electrical.png",
-    title: "Powering Progress",
-    subtitle: "Electrical Subcontracting",
-    description:
-      "Comprehensive electrical solutions including high-voltage installations, switchgear, and industrial power systems.",
-  },
-  {
-    id: 4,
     image: "/images/hero/mechanical.png",
-    title: "Technical Precision",
-    subtitle: "Mechanical Engineering",
+    title: "Mechanical Subcontractor",
+    subtitle: "Advanced Mechanical Systems",
     description:
-      "Specialized mechanical services ensuring safety, quality, and compliance with international standards for complex systems.",
-  },
-  {
-    id: 5,
-    image: "/images/hero/construction_2.png",
-    title: "Civil Works",
-    subtitle: "Infrastructure Development",
-    description:
-      "Expert execution of civil works, structural steel, and site preparation for industrial and commercial projects.",
+      "Professional mechanical subcontracting services delivering HVAC, piping, and mechanical installations with precision and compliance to international standards.",
   },
 ];
 
