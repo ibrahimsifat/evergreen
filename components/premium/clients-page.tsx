@@ -120,7 +120,7 @@ export default function PremiumClientsPage() {
                         src={client.logo || "/placeholder.svg"}
                         alt={client.name}
                         fill
-                        className="object-contain filter grayscale opacity-60 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-500"
+                        className="object-contain group-hover:scale-110 transition-all duration-500"
                       />
                     </div>
                   </motion.div>
