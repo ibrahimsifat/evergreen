@@ -94,7 +94,7 @@ export default function PremiumServicesPage() {
                 <div key={i} className="bg-white rounded-[2rem] h-[500px] animate-pulse shadow-xl" />
               ))
             ) : (
-              (services || []).map((service, index) => {
+              (services || []).map((service : any, index : number) => {
                 const IconComponent = iconMap[service.icon] || Building2;
                 
                 return (

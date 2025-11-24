@@ -1,5 +1,6 @@
 import { CreateServiceData, Service } from "@/lib/models/Service";
 import { getDatabase } from "@/lib/mongodb";
+import { revalidateTag } from "next/cache";
 import { NextRequest, NextResponse } from "next/server";
 
 // GET - Fetch all services
@@ -17,7 +18,14 @@ export async function GET() {
       _id: service._id?.toString(),
     }));
 
-    return NextResponse.json({ success: true, data: servicesWithStringIds });
+    return NextResponse.json(
+      { success: true, data: servicesWithStringIds },
+      {
+        headers: {
+          'Cache-Control': 'public, s-maxage=60, stale-while-revalidate=120'
+        }
+      }
+    );
   } catch (error) {
     console.error("Error fetching services:", error);
     return NextResponse.json(
@@ -26,6 +34,8 @@ export async function GET() {
     );
   }
 }
+
+export const revalidate = 60; // Revalidate every 60 seconds
 
 // POST - Create new service
 export async function POST(request: NextRequest) {
@@ -61,6 +71,9 @@ export async function POST(request: NextRequest) {
       ...newService,
       _id: result.insertedId.toString(),
     };
+
+    // Revalidate services cache
+    revalidateTag('services');
 
     return NextResponse.json({
       success: true,

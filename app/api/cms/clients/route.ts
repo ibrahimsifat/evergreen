@@ -1,5 +1,6 @@
 import { Client, CreateClientData } from "@/lib/models/Client";
 import { getDatabase } from "@/lib/mongodb";
+import { revalidateTag } from "next/cache";
 import { NextRequest, NextResponse } from "next/server";
 
 // GET - Fetch all clients
@@ -14,7 +15,14 @@ export async function GET() {
       _id: client._id?.toString(),
     }));
 
-    return NextResponse.json({ success: true, data: clientsWithStringIds });
+    return NextResponse.json(
+      { success: true, data: clientsWithStringIds },
+      {
+        headers: {
+          'Cache-Control': 'public, s-maxage=60, stale-while-revalidate=120'
+        }
+      }
+    );
   } catch (error) {
     console.error("Error fetching clients:", error);
     return NextResponse.json(
@@ -23,6 +31,8 @@ export async function GET() {
     );
   }
 }
+
+export const revalidate = 60; // Revalidate every 60 seconds
 
 // POST - Create new client
 export async function POST(request: NextRequest) {
@@ -57,6 +67,9 @@ export async function POST(request: NextRequest) {
       ...newClient,
       _id: result.insertedId.toString(),
     };
+
+    // Revalidate clients cache
+    revalidateTag('clients');
 
     return NextResponse.json({
       success: true,

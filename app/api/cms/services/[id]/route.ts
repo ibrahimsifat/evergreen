@@ -1,5 +1,6 @@
 import { Service, UpdateServiceData } from "@/lib/models/Service";
 import { getDatabase } from "@/lib/mongodb";
+import { revalidatePath, revalidateTag } from "next/cache";
 import { NextRequest, NextResponse } from "next/server";
 
 // GET - Fetch single service
@@ -25,7 +26,14 @@ export async function GET(
       _id: service._id?.toString(),
     };
 
-    return NextResponse.json({ success: true, data: serviceWithStringId });
+    return NextResponse.json(
+      { success: true, data: serviceWithStringId },
+      {
+        headers: {
+          'Cache-Control': 'public, s-maxage=60, stale-while-revalidate=120'
+        }
+      }
+    );
   } catch (error) {
     console.error("Error fetching service:", error);
     return NextResponse.json(
@@ -34,6 +42,8 @@ export async function GET(
     );
   }
 }
+
+export const revalidate = 60; // Revalidate every 60 seconds
 
 // PUT - Update service
 export async function PUT(
@@ -72,6 +82,11 @@ export async function PUT(
       _id: updateResult._id?.toString(),
     };
 
+    // Revalidate caches
+    revalidateTag('services');
+    revalidatePath('/services');
+    revalidatePath(`/services/${params.id}`);
+
     return NextResponse.json({
       success: true,
       data: updatedService,
@@ -109,6 +124,11 @@ export async function DELETE(
       ...deletedService,
       _id: deletedService._id?.toString(),
     };
+
+    // Revalidate caches
+    revalidateTag('services');
+    revalidatePath('/services');
+    revalidatePath(`/services/${params.id}`);
 
     return NextResponse.json({
       success: true,

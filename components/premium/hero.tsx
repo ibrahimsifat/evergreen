@@ -92,7 +92,7 @@ export default function PremiumHero() {
       ))}
 
       {/* Content */}
-      <div className="relative z-10 h-full container mx-auto px-4 flex flex-col justify-center">
+      <div className="relative z-10 h-full container mx-auto px-4 flex flex-col justify-center pt-32">
         <motion.div
           style={{ y, opacity }}
           className="max-w-4xl"
@@ -184,21 +184,6 @@ export default function PremiumHero() {
           </button>
         ))}
       </div>
-
-      {/* Scroll Indicator */}
-      <motion.div
-        className="absolute bottom-8 left-1/2 -translate-x-1/2 z-20"
-        animate={{ y: [0, 10, 0] }}
-        transition={{ duration: 2, repeat: Infinity }}
-      >
-        <div className="w-[30px] h-[50px] rounded-full border-2 border-white/30 flex justify-center p-2 backdrop-blur-sm">
-          <motion.div
-            className="w-1 h-2 bg-white rounded-full"
-            animate={{ y: [0, 12, 0] }}
-            transition={{ duration: 2, repeat: Infinity }}
-          />
-        </div>
-      </motion.div>
     </section>
   );
 }

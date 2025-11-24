@@ -77,19 +77,19 @@ export default function PremiumHeader() {
     <>
       <motion.header
         className={cn(
-          "fixed top-0 left-0 right-0 z-50 transition-all duration-500 h-20 flex items-center",
+          "fixed top-0 left-0 right-0 z-50 transition-all duration-500 h-24 flex items-center",
           isScrolled
             ? "bg-white/90 backdrop-blur-md shadow-lg"
             : "bg-transparent"
         )}
         initial={{ y: -100 }}
-        animate={{ y: 0 }}
+        animate={{ y: 0 }}  
         transition={{ duration: 0.5 }}
       >
         <div className="container mx-auto px-4">
           <div className="flex items-center justify-between">
             {/* Logo */}
-            <Link href="/" className="relative z-50">
+            <Link href="/" className="relative z-50 pt-2">
               <div className="flex items-center gap-3">
                 <Image
                   src="/images/top-logo.png"
@@ -98,7 +98,7 @@ export default function PremiumHeader() {
                   height={40}
                   className={cn(
                     "transition-all duration-300",
-                    isScrolled ? "" : "brightness-0 invert"
+                    isScrolled || isMobileMenuOpen ? "" : "brightness-0 invert"
                   )}
                 />
               </div>
@@ -304,22 +304,25 @@ export default function PremiumHeader() {
                 </Link>
               ))}
 
-              <Link
-                href="/contact"
+              <a
+                href="/profile.pdf"
+                download
+                target="_blank"
                 className={cn(
-                  "px-6 py-2.5 rounded-full font-semibold text-sm transition-all duration-300 transform hover:scale-105 hover:shadow-lg",
+                  "px-6 py-2.5 rounded-full font-semibold text-sm transition-all duration-300 transform hover:scale-105 hover:shadow-lg flex items-center gap-2",
                   isScrolled
                     ? "bg-[#0071BB] text-white hover:bg-[#005a94]"
                     : "bg-white text-[#0071BB] hover:bg-gray-100"
                 )}
               >
-                Get a Quote
-              </Link>
+                <span>Company Profile</span>
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-download"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" x2="12" y1="15" y2="3"/></svg>
+              </a>
             </nav>
 
             {/* Mobile Menu Button */}
             <button
-              className="lg:hidden relative z-50 p-2"
+              className="lg:hidden relative z-50 p-2 pb-2"
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
             >
               <div className="w-6 h-6 flex flex-col justify-center gap-1.5">
@@ -365,21 +368,8 @@ export default function PremiumHeader() {
             exit={{ opacity: 0 }}
             className="fixed inset-0 z-40 bg-white lg:hidden flex flex-col"
           >
-            {/* Header in Mobile Menu */}
-            <div className="flex items-center justify-between p-6 border-b border-gray-100">
-              <Link href="/" onClick={() => setIsMobileMenuOpen(false)}>
-                 <Image
-                  src="/images/top-logo.png"
-                  alt="Evergreen"
-                  width={100}
-                  height={32}
-                  className="object-contain"
-                />
-              </Link>
-              {/* Close button is handled by the main toggle button which is z-50 */}
-            </div>
-
-            <div className="flex-1 overflow-y-auto py-8 px-6">
+            {/* Content Container - Added padding top to account for fixed header */}
+            <div className="flex-1 overflow-y-auto pt-28 pb-8 px-6">
               <nav className="flex flex-col gap-8">
                 <div className="space-y-6">
                   {[
@@ -436,6 +426,15 @@ export default function PremiumHeader() {
 
             <div className="p-6 bg-gray-50 mt-auto">
                <div className="flex flex-col gap-4">
+                  <a
+                    href="/profile.pdf"
+                    download
+                    target="_blank"
+                    className="flex items-center justify-center gap-2 w-full py-4 bg-white border-2 border-[#0071BB] text-[#0071BB] rounded-xl font-bold hover:bg-[#0071BB]/5 transition-colors"
+                  >
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-download"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" x2="12" y1="15" y2="3"/></svg>
+                    Company Profile
+                  </a>
                   <a
                     href="tel:0559481660"
                     className="flex items-center justify-center gap-2 w-full py-4 bg-[#0071BB] text-white rounded-xl font-bold"

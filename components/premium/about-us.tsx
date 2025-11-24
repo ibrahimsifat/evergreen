@@ -77,7 +77,6 @@ export default function PremiumAboutUs() {
             <div className="relative rounded-3xl overflow-hidden shadow-2xl aspect-[4/3] group">
               <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent z-10" />
               {/* Placeholder for a high-quality office or construction image */}
-              <div className="absolute inset-0 bg-gray-200 animate-pulse" /> 
               <img
                 src="/images/hero/manpower.png" // Using a relevant existing image
                 alt="Evergreen Team"

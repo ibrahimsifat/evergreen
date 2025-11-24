@@ -129,7 +129,7 @@ export default function PremiumAboutPage() {
             >
               <div className="relative h-[600px] rounded-[2rem] overflow-hidden shadow-2xl">
                 <Image
-                  src="/images/about-company-new.png"
+                  src="/images/about-company-team.jpg"
                   alt="Our Team"
                   fill
                   className="object-cover"
