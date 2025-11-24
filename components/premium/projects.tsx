@@ -70,7 +70,7 @@ export default function PremiumProjects() {
           >
             {projects?.slice(0, 8).map((project: any) => (
               <SwiperSlide key={project.id}>
-                <Link href="/projects" className="group block h-full">
+                <Link href={`/projects/${project.id}`} className="group block h-full">
                   <div className="relative h-[500px] rounded-[2rem] overflow-hidden shadow-sm hover:shadow-2xl transition-all duration-700">
                     {/* Image */}
                     <Image

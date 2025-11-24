@@ -259,18 +259,18 @@ export default function PremiumContactPageV2() {
       </section>
 
       {/* Final CTA */}
-      <section className="py-24 bg-white">
+      <section className="py-12 md:py-24 bg-white">
         <div className="container mx-auto px-4">
-          <div className="bg-gradient-to-r from-blue-600 to-purple-600 rounded-[3rem] p-12 md:p-24 text-center text-white relative overflow-hidden">
+          <div className="bg-gradient-to-r from-blue-600 to-purple-600 rounded-2xl md:rounded-[3rem] p-8 md:p-16 lg:p-24 text-center text-white relative overflow-hidden">
             <div className="absolute top-0 left-0 w-full h-full bg-[url('/images/pattern-grid.svg')] opacity-20" />
             <div className="relative z-10 max-w-3xl mx-auto">
-              <h2 className="text-4xl md:text-6xl font-bold mb-8">Ready to Start?</h2>
-              <p className="text-xl text-blue-100 mb-12">
+              <h2 className="text-3xl md:text-5xl lg:text-6xl font-bold mb-4 md:mb-8">Ready to Start?</h2>
+              <p className="text-base md:text-xl text-blue-100 mb-8 md:mb-12 px-4">
                 Join hundreds of satisfied clients who trust Evergreen for their industrial needs.
               </p>
-              <button className="px-10 py-5 bg-white text-blue-600 rounded-full font-bold text-lg hover:bg-blue-50 transition-all transform hover:scale-105 shadow-xl flex items-center gap-3 mx-auto">
+              <button className="px-6 md:px-10 py-4 md:py-5 bg-white text-blue-600 rounded-full font-bold text-base md:text-lg hover:bg-blue-50 transition-all transform hover:scale-105 shadow-xl flex items-center gap-2 md:gap-3 mx-auto">
                 Get Your Free Quote
-                <ArrowRight className="w-5 h-5" />
+                <ArrowRight className="w-4 h-4 md:w-5 md:h-5" />
               </button>
             </div>
           </div>

@@ -107,7 +107,7 @@ export default function PremiumAboutUs() {
             <div className="absolute -bottom-12 -left-12 w-32 h-32 bg-blue-600/10 rounded-full blur-2xl" />
             
             {/* Floating Badge */}
-            <div className="absolute -right-6 top-12 z-30 bg-white p-4 rounded-2xl shadow-xl border border-gray-100 animate-bounce-slow hidden md:block">
+            <div className="absolute -right-6 top-12 z-30 bg-white p-4 rounded-2xl shadow-xl border border-gray-100 hidden md:block">
               <div className="flex items-center gap-3">
                 <div className="w-10 h-10 bg-green-50 rounded-full flex items-center justify-center">
                   <CheckCircle2 className="w-6 h-6 text-green-500" />
