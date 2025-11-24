@@ -2,6 +2,7 @@
   "services": [
     {
       "id": "manpower-supply",
+      "slug": "manpower-supply",
       "title": "Professional Manpower Supply",
       "shortTitle": "Manpower Supply",
       "description": "Providing skilled, certified, and reliable workforce solutions tailored to the unique demands of construction and industrial projects.",
@@ -53,13 +54,14 @@
         "General & Skilled Labor"
       ],
       "images": [
-        "/images/services/new/manpower.png"
+        "/images/services/new/manpower-v3.png"
       ],
       "icon": "Users",
       "category": "manpower"
     },
     {
       "id": "electrical-subcontracting",
+      "slug": "electrical-subcontracting",
       "title": "Electrical Subcontracting Services",
       "shortTitle": "Electrical Subcontracting",
       "description": "Delivering comprehensive electrical engineering, installation, and maintenance solutions with a focus on safety and efficiency.",
@@ -117,6 +119,7 @@
     },
     {
       "id": "mechanical-subcontracting",
+      "slug": "mechanical-subcontracting",
       "title": "Mechanical Subcontracting Solutions",
       "shortTitle": "Mechanical Subcontracting",
       "description": "Expert mechanical engineering, fabrication, and installation services for HVAC, piping, and industrial systems.",
@@ -174,6 +177,7 @@
     },
     {
       "id": "general-contracting",
+      "slug": "general-contracting",
       "title": "General Contracting & Construction",
       "shortTitle": "General Contracting",
       "description": "End-to-end construction management and execution for residential, commercial, and industrial projects.",

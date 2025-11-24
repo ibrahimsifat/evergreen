@@ -4,11 +4,11 @@ import Layout from "@/components/layout";
 import { useClients } from "@/hooks/use-data-cache";
 import { motion } from "framer-motion";
 import {
-    Award,
-    CheckCircle,
-    Quote,
-    Star,
-    Users
+  Award,
+  CheckCircle,
+  Quote,
+  Star,
+  Users
 } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
@@ -104,7 +104,7 @@ export default function PremiumClientsPage() {
             </div>
           ) : (
             <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-6">
-              {clients
+              {(clients || [])
                 .filter((client: Client) => client.isActive)
                 .map((client: Client, index: number) => (
                   <motion.div

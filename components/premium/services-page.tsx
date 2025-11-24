@@ -106,7 +106,7 @@ export default function PremiumServicesPage() {
                     transition={{ delay: index * 0.1 }}
                   >
                     <Link href={`/services/${service.id}`} className="group block h-full">
-                      <div className="bg-white rounded-md overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-500 h-full flex flex-col border border-gray-100">
+                      <div className="bg-white rounded-md overflow-hidden shadow-xl transition-all duration-500 h-full flex flex-col border border-gray-100">
                         {/* Image Area */}
                         <div className="relative h-64 overflow-hidden">
                           <Image

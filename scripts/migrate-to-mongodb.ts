@@ -1,6 +1,8 @@
+import { config } from "dotenv";
 import { readFileSync } from "fs";
 import { MongoClient } from "mongodb";
 import { join } from "path";
+config({ path: ".env.local" });
 
 async function migrateData() {
   try {
@@ -75,11 +77,9 @@ async function migrateData() {
 }
 
 // Run migration if this file is executed directly
-if (import.meta.url === `file://${process.argv[1]}`) {
-  migrateData().then(() => {
-    console.log("Migration script completed");
-    process.exit(0);
-  });
-}
+migrateData().then(() => {
+  console.log("Migration script completed");
+  process.exit(0);
+});
 
 export default migrateData;

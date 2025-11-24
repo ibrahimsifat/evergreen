@@ -9,7 +9,7 @@ import { useEffect, useState } from "react";
 const slides = [
   {
     id: 1,
-    image: "/images/hero/general.png",
+    image: "/images/hero/construction_2.png",
     title: "Building Excellence",
     subtitle: "Premier General Contracting",
     description:

@@ -79,7 +79,7 @@ export default function PremiumAboutUs() {
               {/* Placeholder for a high-quality office or construction image */}
               <div className="absolute inset-0 bg-gray-200 animate-pulse" /> 
               <img
-                src="/images/imgi_13_6.jpg" // Using an existing image from the project
+                src="/images/hero/manpower.png" // Using a relevant existing image
                 alt="Evergreen Team"
                 className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-700"
               />

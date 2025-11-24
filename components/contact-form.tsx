@@ -76,21 +76,18 @@ export default function ContactForm({ className = "" }: ContactFormProps) {
   };
 
   return (
-    <div className={`bg-gray-50 p-8 rounded-lg ${className}`}>
-      <h3 className="text-2xl font-bold text-gray-800 mb-6">
-        Send Us a Message
-      </h3>
+    <div className={`bg-white p-0 md:p-8 rounded-2xl shadow-none md:shadow-sm md:border border-gray-100 ${className}`}>
 
       {/* Status Messages */}
       {submitStatus === "success" && (
-        <div className="mb-6 p-4 bg-green-50 border border-green-200 rounded-lg flex items-center">
+        <div className="mb-6 p-4 bg-green-50 border border-green-200 rounded-xl flex items-center">
           <CheckCircle className="w-5 h-5 text-green-600 mr-3" />
           <p className="text-green-800">{submitMessage}</p>
         </div>
       )}
 
       {submitStatus === "error" && (
-        <div className="mb-6 p-4 bg-red-50 border border-red-200 rounded-lg flex items-center">
+        <div className="mb-6 p-4 bg-red-50 border border-red-200 rounded-xl flex items-center">
           <AlertCircle className="w-5 h-5 text-red-600 mr-3" />
           <p className="text-red-800">{submitMessage}</p>
         </div>
@@ -101,7 +98,7 @@ export default function ContactForm({ className = "" }: ContactFormProps) {
           <div>
             <label
               htmlFor="firstName"
-              className="block text-sm font-medium text-gray-700 mb-2"
+              className="block text-sm font-semibold text-gray-700 mb-2"
             >
               First Name *
             </label>
@@ -109,10 +106,10 @@ export default function ContactForm({ className = "" }: ContactFormProps) {
               {...register("firstName")}
               type="text"
               id="firstName"
-              className={`w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-orange-500 transition-colors ${
-                errors.firstName ? "border-red-500" : "border-gray-300"
+              className={`w-full px-5 py-3.5 bg-gray-50 border rounded-xl focus:ring-2 focus:ring-[#0071BB] focus:border-[#0071BB] transition-all outline-none ${
+                errors.firstName ? "border-red-500" : "border-gray-200 hover:border-gray-300"
               }`}
-              placeholder="Your first name"
+              placeholder="John"
             />
             {errors.firstName && (
               <p className="mt-1 text-sm text-red-600">
@@ -124,7 +121,7 @@ export default function ContactForm({ className = "" }: ContactFormProps) {
           <div>
             <label
               htmlFor="lastName"
-              className="block text-sm font-medium text-gray-700 mb-2"
+              className="block text-sm font-semibold text-gray-700 mb-2"
             >
               Last Name *
             </label>
@@ -132,10 +129,10 @@ export default function ContactForm({ className = "" }: ContactFormProps) {
               {...register("lastName")}
               type="text"
               id="lastName"
-              className={`w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-orange-500 transition-colors ${
-                errors.lastName ? "border-red-500" : "border-gray-300"
+              className={`w-full px-5 py-3.5 bg-gray-50 border rounded-xl focus:ring-2 focus:ring-[#0071BB] focus:border-[#0071BB] transition-all outline-none ${
+                errors.lastName ? "border-red-500" : "border-gray-200 hover:border-gray-300"
               }`}
-              placeholder="Your last name"
+              placeholder="Doe"
             />
             {errors.lastName && (
               <p className="mt-1 text-sm text-red-600">
@@ -148,7 +145,7 @@ export default function ContactForm({ className = "" }: ContactFormProps) {
         <div>
           <label
             htmlFor="email"
-            className="block text-sm font-medium text-gray-700 mb-2"
+            className="block text-sm font-semibold text-gray-700 mb-2"
           >
             Email Address *
           </label>
@@ -156,10 +153,10 @@ export default function ContactForm({ className = "" }: ContactFormProps) {
             {...register("email")}
             type="email"
             id="email"
-            className={`w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-orange-500 transition-colors ${
-              errors.email ? "border-red-500" : "border-gray-300"
+            className={`w-full px-5 py-3.5 bg-gray-50 border rounded-xl focus:ring-2 focus:ring-[#0071BB] focus:border-[#0071BB] transition-all outline-none ${
+              errors.email ? "border-red-500" : "border-gray-200 hover:border-gray-300"
             }`}
-            placeholder="your.email@example.com"
+            placeholder="john@example.com"
           />
           {errors.email && (
             <p className="mt-1 text-sm text-red-600">{errors.email.message}</p>
@@ -169,7 +166,7 @@ export default function ContactForm({ className = "" }: ContactFormProps) {
         <div>
           <label
             htmlFor="phone"
-            className="block text-sm font-medium text-gray-700 mb-2"
+            className="block text-sm font-semibold text-gray-700 mb-2"
           >
             Phone Number
           </label>
@@ -177,15 +174,15 @@ export default function ContactForm({ className = "" }: ContactFormProps) {
             {...register("phone")}
             type="tel"
             id="phone"
-            className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-orange-500 transition-colors"
-            placeholder="+966 XX XXX XXXX"
+            className="w-full px-5 py-3.5 bg-gray-50 border border-gray-200 rounded-xl focus:ring-2 focus:ring-[#0071BB] focus:border-[#0071BB] transition-all outline-none hover:border-gray-300"
+            placeholder="+966 5X XXX XXXX"
           />
         </div>
 
         <div>
           <label
             htmlFor="company"
-            className="block text-sm font-medium text-gray-700 mb-2"
+            className="block text-sm font-semibold text-gray-700 mb-2"
           >
             Company Name
           </label>
@@ -193,50 +190,36 @@ export default function ContactForm({ className = "" }: ContactFormProps) {
             {...register("company")}
             type="text"
             id="company"
-            className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-orange-500 transition-colors"
-            placeholder="Your company name"
+            className="w-full px-5 py-3.5 bg-gray-50 border border-gray-200 rounded-xl focus:ring-2 focus:ring-[#0071BB] focus:border-[#0071BB] transition-all outline-none hover:border-gray-300"
+            placeholder="Company Ltd."
           />
         </div>
 
         <div>
           <label
             htmlFor="service"
-            className="block text-sm font-medium text-gray-700 mb-2"
+            className="block text-sm font-semibold text-gray-700 mb-2"
           >
             Service Interested In
           </label>
           <select
             {...register("service")}
             id="service"
-            className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-orange-500 transition-colors"
+            className="w-full px-5 py-3.5 bg-gray-50 border border-gray-200 rounded-xl focus:ring-2 focus:ring-[#0071BB] focus:border-[#0071BB] transition-all outline-none hover:border-gray-300"
           >
             <option value="">Select a service</option>
-            <option value="electro-mechanical-works">
-              Electro Mechanical Works (HVAC)
-            </option>
-            <option value="energy-saving-solutions">
-              Energy Saving Solutions
-            </option>
-            <option value="fiber-cable-pulling">
-              Fiber Cable Pulling Work
-            </option>
-            <option value="electro-works">Electro Works</option>
-            <option value="civil-works">Civil Works</option>
-            <option value="generator-works">Generator Works</option>
-            <option value="heat-exchangers">Heat Exchangers</option>
-            <option value="trading-services">Trading Services</option>
-            <option value="heavy-equipment">Heavy Equipment</option>
-            <option value="general-contracting">General Contracting</option>
             <option value="manpower-supply">Manpower Supply</option>
-            <option value="scaffolding-works">Scaffolding Works</option>
-            <option value="consultation">General Consultation</option>
+            <option value="electrical-subcontracting">Electrical Subcontracting</option>
+            <option value="mechanical-subcontracting">Mechanical Subcontracting</option>
+            <option value="general-contracting">General Contracting</option>
+            <option value="other">Other Inquiries</option>
           </select>
         </div>
 
         <div>
           <label
             htmlFor="message"
-            className="block text-sm font-medium text-gray-700 mb-2"
+            className="block text-sm font-semibold text-gray-700 mb-2"
           >
             Message *
           </label>
@@ -244,8 +227,8 @@ export default function ContactForm({ className = "" }: ContactFormProps) {
             {...register("message")}
             id="message"
             rows={5}
-            className={`w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-orange-500 transition-colors ${
-              errors.message ? "border-red-500" : "border-gray-300"
+            className={`w-full px-5 py-3.5 bg-gray-50 border rounded-xl focus:ring-2 focus:ring-[#0071BB] focus:border-[#0071BB] transition-all outline-none ${
+              errors.message ? "border-red-500" : "border-gray-200 hover:border-gray-300"
             }`}
             placeholder="Tell us about your project requirements..."
           />
@@ -259,12 +242,12 @@ export default function ContactForm({ className = "" }: ContactFormProps) {
         <button
           type="submit"
           disabled={isSubmitting}
-          className="w-full bg-orange-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-orange-700 transition-colors flex items-center justify-center disabled:opacity-50 disabled:cursor-not-allowed"
+          className="w-full bg-[#0071BB] text-white px-8 py-4 rounded-xl font-bold text-lg hover:bg-[#005a94] transition-all transform hover:scale-[1.02] shadow-lg shadow-blue-900/20 flex items-center justify-center disabled:opacity-50 disabled:cursor-not-allowed disabled:transform-none"
         >
           {isSubmitting ? (
             <>
               <Loader2 className="w-5 h-5 mr-2 animate-spin" />
-              Sending Message...
+              Sending...
             </>
           ) : (
             <>

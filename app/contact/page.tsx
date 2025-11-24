@@ -1,4 +1,4 @@
-import PremiumContactPage from "@/components/premium/contact-page";
+import PremiumContactPage from "@/components/premium/contact-page-v2";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {

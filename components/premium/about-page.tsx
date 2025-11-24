@@ -24,8 +24,8 @@ export default function PremiumAboutPage() {
       <section className="relative h-[80vh] overflow-hidden flex items-center justify-center">
         <div className="absolute inset-0">
           <Image
-            src="/images/about-hero.png"
-            alt="Evergreen Leadership Team"
+            src="/images/about-hero-construction.png"
+            alt="Construction Site"
             fill
             className="object-cover"
             priority

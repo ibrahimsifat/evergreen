@@ -47,7 +47,7 @@ export function useDataCache<T>(
   } = options;
 
   const [data, setData] = useState<T | null>(null);
-  const [loading, setLoading] = useState(false);
+  const [loading, setLoading] = useState(enabled);
   const [error, setError] = useState<Error | null>(null);
   const fetcherRef = useRef(fetcher);
 

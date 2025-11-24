@@ -1,15 +1,11 @@
 "use client";
 
 import {
-  Facebook,
-  Instagram,
-  Linkedin,
   Mail,
   MapPin,
   Phone,
-  Twitter,
-  Youtube,
 } from "lucide-react";
+import Image from "next/image";
 import Link from "next/link";
 
 export default function PremiumFooter() {
@@ -31,18 +27,8 @@ export default function PremiumFooter() {
     ],
     legal: [
       { name: "Privacy Policy", href: "/privacy" },
-      { name: "Terms of Service", href: "/terms" },
-      { name: "Cookie Policy", href: "/cookies" },
     ],
   };
-
-  const socialLinks = [
-    { icon: Linkedin, href: "#", label: "LinkedIn" },
-    { icon: Twitter, href: "#", label: "Twitter" },
-    { icon: Facebook, href: "#", label: "Facebook" },
-    { icon: Instagram, href: "#", label: "Instagram" },
-    { icon: Youtube, href: "#", label: "Youtube" },
-  ];
 
   return (
     <footer className="bg-gray-900 text-white relative overflow-hidden">
@@ -54,29 +40,19 @@ export default function PremiumFooter() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
           {/* Company Info */}
           <div className="space-y-6">
-            <Link href="/" className="inline-block">
-              <div className="text-2xl font-bold tracking-tighter text-white">
-                EVER<span className="text-blue-500">GREEN</span>
+            <Link href="/" className="inline-block mb-6">
+              <div className="relative w-48 h-16 opacity-70 hover:opacity-100 transition-opacity duration-300">
+                <Image
+                  src="/images/top-logo.png"
+                  alt="Evergreen Intelligent Company"
+                  fill
+                  className="object-contain brightness-0 invert"
+                />
               </div>
-              <p className="text-xs text-gray-400 tracking-widest uppercase mt-1">
-                Intelligent Company
-              </p>
             </Link>
             <p className="text-gray-400 leading-relaxed text-sm">
               A leading provider of manpower, electrical, and mechanical subcontracting services in Saudi Arabia. Committed to excellence, safety, and innovation.
             </p>
-            <div className="flex gap-4">
-              {socialLinks.map((social, index) => (
-                <a
-                  key={index}
-                  href={social.href}
-                  aria-label={social.label}
-                  className="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center text-gray-400 hover:bg-blue-600 hover:text-white transition-all duration-300"
-                >
-                  <social.icon className="w-5 h-5" />
-                </a>
-              ))}
-            </div>
           </div>
 
           {/* Quick Links */}

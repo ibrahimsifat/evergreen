@@ -110,7 +110,7 @@ export default function PremiumServices() {
                   href={`/services/${service.id}`}
                   className="group relative block h-full"
                 >
-                  <div className="relative h-full bg-white rounded-[2rem] p-3 shadow-sm hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 border border-gray-100 overflow-hidden">
+                  <div className="relative h-full bg-white rounded-[2rem] p-3 shadow-sm transition-all duration-500 hover:-translate-y-2 border border-gray-100 overflow-hidden">
                     {/* Image Container */}
                     <div className="relative h-64 rounded-[1.5rem] overflow-hidden mb-6">
                       <Image

@@ -11,7 +11,6 @@ import {
     Building2,
     ChevronDown,
     ChevronRight,
-    Mail,
     Phone,
     Users,
     Wrench,
@@ -364,89 +363,87 @@ export default function PremiumHeader() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            className="fixed inset-0 z-40 bg-white lg:hidden"
+            className="fixed inset-0 z-40 bg-white lg:hidden flex flex-col"
           >
-            <div className="flex flex-col h-full pt-24 px-6 pb-8 overflow-y-auto">
-              <nav className="flex flex-col gap-6">
-                {[
-                  { name: "Home", href: "/" },
-                  { name: "About Us", href: "/about" },
-                  { name: "Projects", href: "/projects" },
-                  { name: "Clients", href: "/clients" },
-                  { name: "Contact", href: "/contact" },
-                ].map((item, i) => (
-                  <motion.div
-                    key={item.name}
-                    initial={{ opacity: 0, x: -20 }}
-                    animate={{ opacity: 1, x: 0 }}
-                    transition={{ delay: i * 0.1 }}
-                  >
-                    <Link
-                      href={item.href}
-                      className="text-2xl font-bold text-gray-900 hover:text-[#0071BB] transition-colors"
-                      onClick={() => setIsMobileMenuOpen(false)}
+            {/* Header in Mobile Menu */}
+            <div className="flex items-center justify-between p-6 border-b border-gray-100">
+              <Link href="/" onClick={() => setIsMobileMenuOpen(false)}>
+                 <Image
+                  src="/images/top-logo.png"
+                  alt="Evergreen"
+                  width={100}
+                  height={32}
+                  className="object-contain"
+                />
+              </Link>
+              {/* Close button is handled by the main toggle button which is z-50 */}
+            </div>
+
+            <div className="flex-1 overflow-y-auto py-8 px-6">
+              <nav className="flex flex-col gap-8">
+                <div className="space-y-6">
+                  {[
+                    { name: "Home", href: "/" },
+                    { name: "About Us", href: "/about" },
+                    { name: "Projects", href: "/projects" },
+                    { name: "Clients", href: "/clients" },
+                    { name: "Contact", href: "/contact" },
+                  ].map((item, i) => (
+                    <motion.div
+                      key={item.name}
+                      initial={{ opacity: 0, x: -20 }}
+                      animate={{ opacity: 1, x: 0 }}
+                      transition={{ delay: i * 0.05 }}
                     >
-                      {item.name}
-                    </Link>
-                  </motion.div>
-                ))}
+                      <Link
+                        href={item.href}
+                        className="text-3xl font-bold text-gray-900 hover:text-[#0071BB] transition-colors block"
+                        onClick={() => setIsMobileMenuOpen(false)}
+                      >
+                        {item.name}
+                      </Link>
+                    </motion.div>
+                  ))}
+                </div>
 
                 <motion.div
-                  initial={{ opacity: 0, x: -20 }}
-                  animate={{ opacity: 1, x: 0 }}
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: 0.3 }}
-                  className="border-t border-gray-100 pt-6 mt-2"
+                  className="border-t border-gray-100 pt-8"
                 >
-                  <h3 className="text-sm font-semibold text-gray-500 uppercase tracking-wider mb-4">
-                    Services
+                  <h3 className="text-sm font-bold text-gray-400 uppercase tracking-widest mb-6">
+                    Our Services
                   </h3>
                   <div className="grid gap-4">
                     {services.map((service) => (
                       <Link
                         key={service.id}
                         href={service.href}
-                        className="flex items-center gap-3 text-gray-700 hover:text-[#0071BB]"
+                        className="flex items-center gap-4 p-3 rounded-xl hover:bg-gray-50 transition-colors group"
                         onClick={() => setIsMobileMenuOpen(false)}
                       >
-                        <div className="w-8 h-8 rounded-lg bg-[#0071BB]/10 flex items-center justify-center">
-                          <service.icon className="w-4 h-4 text-[#0071BB]" />
+                        <div className="w-10 h-10 rounded-lg bg-[#0071BB]/10 flex items-center justify-center group-hover:bg-[#0071BB] transition-colors">
+                          <service.icon className="w-5 h-5 text-[#0071BB] group-hover:text-white transition-colors" />
                         </div>
-                        <span className="font-medium">{service.shortTitle}</span>
+                        <span className="font-medium text-gray-700 group-hover:text-gray-900 text-lg">{service.shortTitle}</span>
                       </Link>
                     ))}
                   </div>
                 </motion.div>
               </nav>
+            </div>
 
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.5 }}
-                className="mt-auto pt-8"
-              >
-                <div className="bg-gray-50 rounded-2xl p-6">
-                  <h4 className="font-bold text-gray-900 mb-2">Get in Touch</h4>
-                  <p className="text-sm text-gray-500 mb-4">
-                    Ready to start your project? Contact us today.
-                  </p>
-                  <div className="space-y-3">
-                    <a
-                      href="tel:0559481660"
-                      className="flex items-center gap-2 text-sm font-medium text-gray-700"
-                    >
-                      <Phone className="w-4 h-4 text-[#0071BB]" />
-                      0559481660
-                    </a>
-                    <a
-                      href="mailto:info@evergreen.sa"
-                      className="flex items-center gap-2 text-sm font-medium text-gray-700"
-                    >
-                      <Mail className="w-4 h-4 text-[#0071BB]" />
-                      info@evergreen.sa
-                    </a>
-                  </div>
-                </div>
-              </motion.div>
+            <div className="p-6 bg-gray-50 mt-auto">
+               <div className="flex flex-col gap-4">
+                  <a
+                    href="tel:0559481660"
+                    className="flex items-center justify-center gap-2 w-full py-4 bg-[#0071BB] text-white rounded-xl font-bold"
+                  >
+                    <Phone className="w-5 h-5" />
+                    Call Now
+                  </a>
+               </div>
             </div>
           </motion.div>
         )}
