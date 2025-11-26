@@ -1,4 +1,4 @@
-import { cacheUtils, CACHE_KEYS } from "@/hooks/use-data-cache";
+import { CACHE_KEYS, cacheUtils } from "@/hooks/use-data-cache";
 
 // Cache invalidation patterns for different operations
 export const cacheInvalidation = {
@@ -62,6 +62,25 @@ export const cacheInvalidation = {
       CACHE_KEYS.CLIENTS,
       CACHE_KEYS.CLIENT(clientId),
       CACHE_KEYS.STATS,
+    ]);
+  },
+
+  // Gallery operations
+  onGalleryCreate: () => {
+    cacheUtils.invalidate([CACHE_KEYS.GALLERY_ITEMS]);
+  },
+
+  onGalleryUpdate: (galleryId: string) => {
+    cacheUtils.invalidate([
+      CACHE_KEYS.GALLERY_ITEMS,
+      CACHE_KEYS.GALLERY_ITEM(galleryId),
+    ]);
+  },
+
+  onGalleryDelete: (galleryId: string) => {
+    cacheUtils.invalidate([
+      CACHE_KEYS.GALLERY_ITEMS,
+      CACHE_KEYS.GALLERY_ITEM(galleryId),
     ]);
   },
 

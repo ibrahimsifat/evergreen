@@ -58,7 +58,7 @@ export default function GalleryManagementPage() {
         // Update local cache immediately for better UX
         mutate(galleryItems.filter((item) => item.id !== id));
         // Invalidate cache to ensure consistency
-        cacheInvalidation.invalidatePattern('gallery');
+        cacheInvalidation.onGalleryDelete(id);
       } else {
         console.error("Failed to delete gallery item:", data.message);
       }
@@ -87,7 +87,7 @@ export default function GalleryManagementPage() {
           )
         );
         // Invalidate cache to ensure consistency
-        cacheInvalidation.invalidatePattern('gallery');
+        cacheInvalidation.onGalleryUpdate(id);
       } else {
         console.error("Failed to update gallery item status:", data.message);
       }

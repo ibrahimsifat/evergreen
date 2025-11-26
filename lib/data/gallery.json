@@ -86,5 +86,159 @@
     "isActive": true,
     "createdAt": "2024-01-22T10:00:00.000Z",
     "updatedAt": "2024-01-22T10:00:00.000Z"
+  },
+  {
+    "id": "gallery-9",
+    "title": "Construction Site Overview",
+    "description": "Comprehensive view of our active construction site operations",
+    "imageUrl": "/images/gallary/1 (1).jpg",
+    "category": "Projects",
+    "tags": ["construction", "site", "operations"],
+    "isActive": true,
+    "createdAt": "2024-01-23T10:00:00.000Z",
+    "updatedAt": "2024-01-23T10:00:00.000Z"
+  },
+  {
+    "id": "gallery-10",
+    "title": "Electrical Panel Installation",
+    "description": "Professional installation of electrical distribution panels",
+    "imageUrl": "/images/gallary/1 (2).jpg",
+    "category": "Projects",
+    "tags": ["electrical", "panels", "installation"],
+    "isActive": true,
+    "createdAt": "2024-01-24T10:00:00.000Z",
+    "updatedAt": "2024-01-24T10:00:00.000Z"
+  },
+  {
+    "id": "gallery-11",
+    "title": "Mechanical Equipment Setup",
+    "description": "Installation and setup of advanced mechanical equipment",
+    "imageUrl": "/images/gallary/1 (3).jpg",
+    "category": "Equipment",
+    "tags": ["mechanical", "equipment", "setup"],
+    "isActive": true,
+    "createdAt": "2024-01-25T10:00:00.000Z",
+    "updatedAt": "2024-01-25T10:00:00.000Z"
+  },
+  {
+    "id": "gallery-12",
+    "title": "Workforce Training Session",
+    "description": "Regular training sessions ensuring our team stays updated with latest techniques",
+    "imageUrl": "/images/gallary/1 (4).jpg",
+    "category": "Team",
+    "tags": ["training", "workforce", "development"],
+    "isActive": true,
+    "createdAt": "2024-01-26T10:00:00.000Z",
+    "updatedAt": "2024-01-26T10:00:00.000Z"
+  },
+  {
+    "id": "gallery-13",
+    "title": "Heavy Machinery Operations",
+    "description": "Operating heavy construction machinery with precision and safety",
+    "imageUrl": "/images/gallary/1 (5).jpg",
+    "category": "Equipment",
+    "tags": ["machinery", "operations", "heavy equipment"],
+    "isActive": true,
+    "createdAt": "2024-01-27T10:00:00.000Z",
+    "updatedAt": "2024-01-27T10:00:00.000Z"
+  },
+  {
+    "id": "gallery-14",
+    "title": "Quality Inspection Process",
+    "description": "Rigorous quality control and inspection procedures on all projects",
+    "imageUrl": "/images/gallary/1 (6).jpg",
+    "category": "Projects",
+    "tags": ["quality", "inspection", "control"],
+    "isActive": true,
+    "createdAt": "2024-01-28T10:00:00.000Z",
+    "updatedAt": "2024-01-28T10:00:00.000Z"
+  },
+  {
+    "id": "gallery-15",
+    "title": "Infrastructure Development",
+    "description": "Major infrastructure development project in progress",
+    "imageUrl": "/images/gallary/1 (7).jpg",
+    "category": "Projects",
+    "tags": ["infrastructure", "development", "construction"],
+    "isActive": true,
+    "createdAt": "2024-01-29T10:00:00.000Z",
+    "updatedAt": "2024-01-29T10:00:00.000Z"
+  },
+  {
+    "id": "gallery-16",
+    "title": "Facility Maintenance Work",
+    "description": "Ongoing maintenance services for industrial facilities",
+    "imageUrl": "/images/gallary/1 (8).jpg",
+    "category": "Facilities",
+    "tags": ["maintenance", "facility", "services"],
+    "isActive": true,
+    "createdAt": "2024-01-30T10:00:00.000Z",
+    "updatedAt": "2024-01-30T10:00:00.000Z"
+  },
+  {
+    "id": "gallery-17",
+    "title": "Project Planning Meeting",
+    "description": "Strategic planning and coordination for upcoming projects",
+    "imageUrl": "/images/gallary/1 (9).jpg",
+    "category": "Team",
+    "tags": ["planning", "meeting", "coordination"],
+    "isActive": true,
+    "createdAt": "2024-01-31T10:00:00.000Z",
+    "updatedAt": "2024-01-31T10:00:00.000Z"
+  },
+  {
+    "id": "gallery-18",
+    "title": "Advanced Tools and Equipment",
+    "description": "Utilizing modern tools and equipment for superior results",
+    "imageUrl": "/images/gallary/1 (10).jpg",
+    "category": "Equipment",
+    "tags": ["tools", "equipment", "technology"],
+    "isActive": true,
+    "createdAt": "2024-02-01T10:00:00.000Z",
+    "updatedAt": "2024-02-01T10:00:00.000Z"
+  },
+  {
+    "id": "gallery-19",
+    "title": "Site Safety Management",
+    "description": "Comprehensive safety management and monitoring systems",
+    "imageUrl": "/images/gallary/1 (11).jpg",
+    "category": "Projects",
+    "tags": ["safety", "management", "monitoring"],
+    "isActive": true,
+    "createdAt": "2024-02-02T10:00:00.000Z",
+    "updatedAt": "2024-02-02T10:00:00.000Z"
+  },
+  {
+    "id": "gallery-20",
+    "title": "Commercial Building Project",
+    "description": "Large-scale commercial building construction project",
+    "imageUrl": "/images/gallary/1 (12).jpg",
+    "category": "Projects",
+    "tags": ["commercial", "building", "construction"],
+    "isActive": true,
+    "createdAt": "2024-02-03T10:00:00.000Z",
+    "updatedAt": "2024-02-03T10:00:00.000Z"
+  },
+  {
+    "id": "gallery-21",
+    "title": "Technical Installation Services",
+    "description": "Specialized technical installation and integration services",
+    "imageUrl": "/images/gallary/1 (13).jpg",
+    "category": "Projects",
+    "tags": ["technical", "installation", "services"],
+    "isActive": true,
+    "createdAt": "2024-02-04T10:00:00.000Z",
+    "updatedAt": "2024-02-04T10:00:00.000Z"
+  },
+  {
+    "id": "gallery-22",
+    "title": "Project Completion Ceremony",
+    "description": "Celebrating successful project completion with our team and clients",
+    "imageUrl": "/images/gallary/1 (14).jpg",
+    "category": "Events",
+    "tags": ["completion", "celebration", "success"],
+    "isActive": true,
+    "createdAt": "2024-02-05T10:00:00.000Z",
+    "updatedAt": "2024-02-05T10:00:00.000Z"
   }
 ]

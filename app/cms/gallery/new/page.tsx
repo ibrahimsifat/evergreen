@@ -111,7 +111,7 @@ export default function NewGalleryPage() {
 
       if (data.success) {
         // Invalidate cache to show the new gallery item
-        cacheInvalidation.custom(['gallery-items']);
+        cacheInvalidation.onGalleryCreate();
         router.push("/cms/gallery");
       } else {
         setError(data.message || "Failed to create gallery item");
